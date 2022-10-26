@@ -22,9 +22,6 @@ public class Player : MonoBehaviour
     {
         CalculateMovement(); 
 
-        //if I hit the Space key
-        //spawn gameObject Laser
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
            Instantiate(_laserPrefab, transform.position, Quaternion.identity);
