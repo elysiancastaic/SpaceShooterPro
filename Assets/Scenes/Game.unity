@@ -235,7 +235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3.5
   _laserPrefab: {fileID: 4255585698265095275, guid: abd71d2ccca2ac446bec463f736a283f, type: 3}
-  _fireRate: 0.2
+  _fireRate: 0.15
+  _lives: 3
 --- !u!1 &1651565383
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4035390101184596886, guid: b9ad43aa3ab6fe748a357d46c43594a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.73
       objectReference: {fileID: 0}
     - target: {fileID: 4035390101184596886, guid: b9ad43aa3ab6fe748a357d46c43594a9, type: 3}
       propertyPath: m_LocalPosition.z

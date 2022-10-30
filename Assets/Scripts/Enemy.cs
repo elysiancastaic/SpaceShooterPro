@@ -16,11 +16,8 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 
-        //move down at 4 meters per second
         transform.Translate(Vector3.down * _EnemySpeed * Time.deltaTime);
 
-        //if bottom of screen
-        //respawn at top with a new random x position
         if (transform.position.y <= -6.0f)
         {
             float randomX = Random.Range(-8f, 8f);
@@ -30,18 +27,18 @@ public class Enemy : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //if other is player
-        //Damage Player (Will incorporate Lives later)
-        //Destroy Enemy
 
         if (other.tag == "Player")
         {
+            Player player = other.transform.GetComponent<Player>();
+            
+            if (player != null)
+            {
+                player.Damage();
+            }
+
             Destroy(this.gameObject);
         }
-
-        //if other is Laser
-        //Also Destroy Laser
-        //Destroy Enemy
 
         if (other.tag == "Laser")
         {
